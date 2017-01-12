@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Guess Game</h1>
+
+<form name="input_form">
+<input type="text" id="x" name="gussed" onchange="guessing_hints()" placeholder="Enter u'r guess here">
+</form>
+<script>
+	var key = Math.ceil(Math.random() * 100);
+	function guessing_hints()
+	{
+		var guss = document.forms["input_form"]["gussed"].value;
+		if(key == guss)
+			window.alert("***Congratulations***");
+		else if(key > guss)
+			window.alert("HINT: Greater then " + guss );
+		else
+			window.alert("HINT: Less than " + guss );
+	}
+</script>
+
+</body>
+</html> 

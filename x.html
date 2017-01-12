@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Check you'r Luck</h1>
+
+<button type="button" onclick="guessing_hints()">GUESS</button>
+<form name="input_form">
+<input type="text" id="x" name="gussed">
+</form>
+<script>
+	var key = Math.ceil(Math.random() * 100);
+	function guessing_hints()
+	{
+		var x = document.forms["input_form"]["gussed"].value;
+		if(key == x)
+			window.alert("Congratulations");
+		else if(key > x)
+			window.alert("HINT: Greater then " + x );
+		else
+			window.alert("HINT: Less than " + x );
+	}
+</script>
+
+</body>
+</html> 
